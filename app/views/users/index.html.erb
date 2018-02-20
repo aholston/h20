@@ -1,0 +1,25 @@
+<h1>H20 - A Big Opportunity</h1>
+
+<p>Water connects every aspect of life. Access to safe water and sanitation can quickly turn problems into potential - unlocking education. work opportunities, and improved health for women, children and families across the world.</p>
+<p>Today <strong>1 in 9</strong> people lack access to safe water; <strong>1 in 3</strong> people lack access to a toilet. More people have a mobile phone that a toilet. We can change this. Let's work together to make the power of water available to all.</p>
+
+<h2>Sign Up!</h2>
+<form action='/users' method='POST'>
+  <input type='hidden' name='authenticity_token' value='<%= form_authenticity_token %>'>
+  <inout type='email' name='user[email]' placeholder='First Name'>
+  <input type='text' name='user[first_name]' placeholder='First Name'>
+  <input type='text' name='user[last_name]' placeholder='Last Name'>
+  <input type='text' name='user[address]' placeholder='Address'>
+  <input type='text' name='user[credit_card]' placeholder='Credit Card #'>
+  <input type='password' name='user[password]' placeholder='Password'>
+  <input type='text' name='user[password_confirmation]' placeholder='Password Confirmation'>
+  <input type='submit' value='OK!'>
+</form>
+
+<h2>Log In</h2>
+<form action='/sessions' method='POST'>
+  <input type='hidden' name='authenticity_token' value='<%= form_authenticity_token %>'>
+  <input type='email' name='user[email]' placeholder='First Name'>
+  <input type='password' name='user[password]' placeholder='Password'>
+  <input type='submit' value='OK!'>
+</form>
