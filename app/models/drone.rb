@@ -1,4 +1,4 @@
 class Drone < ActiveRecord::Base
-  belongs_to :sender
-  belongs_to :reciever
+  belongs_to :sender, foreign_key: "sender", class_name: "User"
+  belongs_to :reciever, foreign_key: "reciever", class_name: "User"
 end

@@ -6,13 +6,13 @@
 <h2>Sign Up!</h2>
 <form action='/users' method='POST'>
   <input type='hidden' name='authenticity_token' value='<%= form_authenticity_token %>'>
-  <inout type='email' name='user[email]' placeholder='First Name'>
+  <input type='email' name='user[email]' placeholder='Email'>
   <input type='text' name='user[first_name]' placeholder='First Name'>
   <input type='text' name='user[last_name]' placeholder='Last Name'>
   <input type='text' name='user[address]' placeholder='Address'>
   <input type='text' name='user[credit_card]' placeholder='Credit Card #'>
   <input type='password' name='user[password]' placeholder='Password'>
-  <input type='text' name='user[password_confirmation]' placeholder='Password Confirmation'>
+  <input type='password' name='user[password_confirmation]' placeholder='Password Confirmation'>
   <input type='submit' value='OK!'>
 </form>
 

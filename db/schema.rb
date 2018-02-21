@@ -11,38 +11,28 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180220180108) do
+ActiveRecord::Schema.define(version: 20180220195725) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "drones", force: :cascade do |t|
-    t.integer  "sender_id"
-    t.integer  "reciever_id"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.integer  "sender"
+    t.integer  "reciever"
   end
 
-  add_index "drones", ["sender_id"], name: "index_drones_on_sender_id", using: :btree
-
-  create_table "recievers", force: :cascade do |t|
+  create_table "users", force: :cascade do |t|
     t.string   "first_name"
     t.string   "last_name"
-    t.string   "address"
-    t.string   "password_digest"
-    t.datetime "created_at",      null: false
-    t.datetime "updated_at",      null: false
-  end
-
-  create_table "senders", force: :cascade do |t|
-    t.string   "first_name"
-    t.string   "last_name"
+    t.string   "email"
     t.string   "address"
     t.string   "credit_card"
     t.string   "password_digest"
     t.datetime "created_at",      null: false
     t.datetime "updated_at",      null: false
+    t.integer  "level"
   end
 
-  add_foreign_key "drones", "senders"
 end
