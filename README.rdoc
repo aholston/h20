@@ -1,28 +1,8 @@
-== README
-
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+This is a web application built in Ruby for an optional assignment. Here are the specifications....
 
 
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+The idea is you're building a webapp that can be used to drop-ship reusable 1 gallon water jugs to people in need via solar-powered drones. I know it's cheesy; but at least this way if you want to soup-up your belt exam to use as a portfolio piece, you'll be forced to inject creativity into it before sharing.
+
+You can send 1-gallon drop shipments at a time. I guess that's the max payload for the solar powered vehicle. When people register, all fields are required except credit card number. The assumption is that people who don't provide one are the one's in need... therefore you should *only* be able to ship _those_ people water. If someone who doesn't have a CC# logs in, display everything like as before... but hide the "Send" buttons, since, well... stuff ain't free. Due to this, you obviously should not be able to send yourself water. In fact, the logged in user should not even show up in the list of potential water recipients.
+
+Please pre-populate your database with 10 dummy users of both types and have some send water to others. You will also need to deploy.
